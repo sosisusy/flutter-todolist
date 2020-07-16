@@ -16,24 +16,24 @@ class Todos {
 class TodoDetail {
   int id;
   String body;
-  bool complited;
+  int completed;
 
-  TodoDetail({this.id, this.body, this.complited});
+  TodoDetail({this.id, this.body, this.completed});
 
   factory TodoDetail.initialize() => TodoDetail(
         id: ++Todos.id,
         body: "",
-        complited: false,
+        completed: 0,
       );
   factory TodoDetail.fromJSON(Map<String, dynamic> json) => TodoDetail(
         id: json["id"],
         body: json["body"],
-        complited: json["complited"],
+        completed: json["completed"],
       );
 
   Map<String, dynamic> toJson() => {
         "id": id,
         "body": body,
-        "complited": complited,
+        "completed": completed,
       };
 }

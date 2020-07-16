@@ -20,7 +20,7 @@ class TodoItem extends StatelessWidget {
       },
       builder: (context, callback) => IconButton(
         icon: Icon(Icons.check),
-        color: item.complited ? Colors.lightBlue : Colors.grey,
+        color: item.completed == 1 ? Colors.lightBlue : Colors.grey,
         onPressed: callback,
       ),
     );
@@ -41,7 +41,7 @@ class TodoItem extends StatelessWidget {
     return Text(
       item.body,
       style: TextStyle(
-        decoration: item.complited ? TextDecoration.lineThrough : null,
+        decoration: item.completed == 1 ? TextDecoration.lineThrough : null,
       ),
     );
   }

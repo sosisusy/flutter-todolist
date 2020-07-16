@@ -1,3 +1,5 @@
+import 'package:redux_logging_example/models/todo.dart';
+
 class AddTodoAction {
   String body;
 
@@ -12,4 +14,9 @@ class RemoveTodoAction {
 class ModifyTodoAction {
   int id;
   ModifyTodoAction({this.id});
+}
+
+class ResetTodoAction {
+  Todos items;
+  ResetTodoAction({this.items});
 }
