@@ -46,6 +46,7 @@ class TodoItem extends StatelessWidget {
     );
   }
 
+  // 아이템 드래그 삭제
   Widget _buildDismissible({@required Widget child}) {
     return StoreConnector<AppState, VoidCallback>(
       converter: (store) {
@@ -55,6 +56,9 @@ class TodoItem extends StatelessWidget {
         key: ValueKey(item),
         onDismissed: (direction) => callback(),
         child: child,
+        background: Container(
+          color: Colors.red,
+        ),
       ),
     );
   }
