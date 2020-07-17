@@ -1,7 +1,6 @@
 import 'package:redux_logging_example/actions/todo_action.dart';
 import 'package:redux_logging_example/models/todo.dart';
 import 'package:redux/redux.dart';
-import 'package:redux_logging_example/services/sqlite.dart';
 
 Todos addTodoReducer(Todos state, AddTodoAction action) {
   TodoDetail todo = TodoDetail(
@@ -9,8 +8,6 @@ Todos addTodoReducer(Todos state, AddTodoAction action) {
     body: action.body,
     completed: 0,
   );
-
-  SqliteService().insertTodo(todo);
 
   return Todos(
     items: List.from(state.items)..add(todo),

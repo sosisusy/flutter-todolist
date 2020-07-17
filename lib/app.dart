@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:redux_logging_example/pages/intro_page.dart';
+import 'package:redux_logging_example/pages/todo_page.dart';
 import 'package:redux_logging_example/routes.dart';
 
 class App extends StatelessWidget {
@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: IntroPage.route,
+      initialRoute: TodoPage.route,
       routes: routes,
     );
   }
